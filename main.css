@@ -1,0 +1,53 @@
+/*----- global -----*/
+*{
+  margin:0;
+  padding:0;
+  border:0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+html {
+  font-family: Circular Std,sans-serif;
+}
+body {
+  background-color: #000;
+}
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+}
+/*----- container -----*/
+.container {
+  height: 100vh;
+  max-width: 1550px;
+  background-image: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/*----- botton -----*/
+#btn {
+  background-color: #FF80AB;
+  font-size: 36px;
+  font-weight: 700;
+  color:white;
+  width: 250px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  margin:450px 0px 0px 40%;
+}
+#btn:hover {
+  background-color: #7f3f55;
+}
