@@ -6,6 +6,8 @@
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;/*removes bullets*/
 }
 html {
   font-family: Circular Std,sans-serif;
@@ -23,6 +25,11 @@ h2 {
   font-weight: 800;
   color: #fff;
 }
+
+/*----------------------
+INACTIVE
+-----------------------*/
+
 /*----- container -----*/
 .container {
   height: 100vh;
@@ -34,6 +41,62 @@ h2 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+.masthead {
+  position: relative;
+  top: 40px;
+  left: 55px;
+  z-index: 2;
+  width: 93%;
+  display: flex;
+  align-items: baseline; /*lines items at the top of the div*/
+  justify-content: space-between; /*Renders equally spaced content*/
+}
+.menu-toggle div{
+  background-color: #fff;
+  height: 8px;
+  width: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  /*transition-duration: 250ms;*/
+}
+.one, .two {
+  margin-bottom: 8px;
+}
+/*----- menu -----*/
+.navList {
+  background-color: #FF80AB;
+}
+.navList::before, .navList::after {
+  background-color: #424242;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  transition: all 100ms ease-in-out 300ms; /*Transition and transform*/
+}
+.navList::before {
+  left:0;
+}
+.navList::after {
+  right:0;
+}
+.navList ul {
+  position: absolute;
+  top: -50%;/*hides navList offscreen*/
+  left: 41%;
+}
+.navList a {
+  display: block;
+  text-align: center;/*wouldn't work without display prop block being called*/
+  text-transform: capitalize;
+  padding-bottom: 40px;
+  font-weight: 800;
+  font-size: 64px;
+  color: #F8BBD0;
+  /*transition-delay: 130ms;*/
+}
+.navList a:hover {
+  color: #fff;
 }
 /*----- botton -----*/
 #btn {
@@ -50,4 +113,20 @@ h2 {
 }
 #btn:hover {
   background-color: #7f3f55;
+}
+
+/*----------------------
+ACTIVE STATE
+-----------------------*/
+
+/*----- activeState -----*/
+.menu-toggle.active .one{
+  transform: translateY(16px)rotate(45deg);
+}
+.menu-toggle.active .two{
+  background-color: transparent; /*disappears after translation*/
+  transform: translateX(-55px);
+}
+.menu-toggle.active .three{
+  transform: translateY(-16px)rotate(-45deg);
 }
