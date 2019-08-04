@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container activeEl" >
       <header>
         <nav>
           <div class="masthead">
             <a href="#"><img src="img/logo.png" alt=""></a>
-            <div class="menu-toggle active-element" id="toggle-menu">
+            <div class="menu-toggle activeEl" id="toggle">
               <div class="one"></div>
               <div class="two"></div>
               <div class="three"></div>
             </div>
           </div>
-          <div class="navList">
+          <div class="navList activeEl">
             <ul>
               <li><a href="#0" class="active-link">Home</a></li>
               <li><a href="#0">About</a></li>
@@ -29,7 +29,8 @@
           </div>
         </nav>
       </header>
-      <button type="button" id="btn">sign up</button>
+
+      <button type="button" class="btn activeEl" id="btn">sign up</button>
     </div>
   </body>
   <script type="text/javascript" src="js/main.js"></script>
